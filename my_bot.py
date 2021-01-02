@@ -262,5 +262,5 @@ async def zatanprofile(context):
 
 
 # Run the client on the server
-client.run('NzgxNDMzNDU1NjYwODkyMTcw.X79kng.g1U_0XcGpSRZnPrTinAl3E5on5k')
+client.run('Bot Token')
  
