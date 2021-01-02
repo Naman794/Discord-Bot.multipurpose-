@@ -15,8 +15,9 @@ import asyncio
 
 
 # Client (our bot) 
-client = commands.Bot(command_prefix='-')
+client = commands.Bot(command_prefix='bot prfixes')
 client.remove_command('help')
+# remove command will purge the default help commands so that you can import your own help commands.
 
 
 
@@ -26,7 +27,7 @@ client.remove_command('help')
 
 
 
-
+#rps is basic game code, and a discord.bot is capable of performing every cammands until they get the ping .
 
 @client.command(name='rock' or 'r')
 async def rock(ctx):
@@ -76,7 +77,7 @@ async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 
-
+#clear commands helps to remove any message in the chaanel (anywhere)
 
 
 
@@ -86,11 +87,11 @@ async def clear(ctx, amount=5):
 @client.command(name='version')
 async def version(context):
 
-    myEmbed = discord.Embed(title="About Rooter Version", description=" Current verison of Rooter ", color=0x00ff00)
-    myEmbed.add_field(name='Version Code:', value="v5.9.7.2", inline=False)
-    myEmbed.add_field(name='Date Updated:', value="Nov 5th, 2020", inline=False)
+    myEmbed = discord.Embed(title="", description="  ", color=0x00ff00) #you can change the code of color by just entering different hex codes 
+    myEmbed.add_field(name='V', value="", inline=False)
+    myEmbed.add_field(name='', value="N", inline=False)
     myEmbed.set_footer(text=" ")
-    myEmbed.set_author(name="Rooter Sports Technologies Private Limited")
+    myEmbed.set_author(name="ENTER ANY NAME")
 
     await context.message.channel.send(embed=myEmbed)
     
@@ -130,23 +131,23 @@ async def ping(context):
 @client.event
 async def on_ready():
     # DO STUFF....
-    general_channel = client.get_channel(793061802023714819)
+    general_channel = client.get_channel()
 
     await general_channel.send(' ! ')
 
 
 
-@client.command(name='Rooter')
-async def Rooter(context):
+@client.command(name='')
+async def (context):
 
-        myEmbed = discord.Embed(title="About Rooter", description="Rooter is Gaming and Sports App.Join Daily Contest & GIveaway and Win up to ₹5 Lakhs now. ", color=0x00ff00)
-        myEmbed.add_field(name='Founders & CEO :', value="Piyush & Dipesh Agarwal", inline=False)
-        myEmbed.add_field(name='Established', value="Since Year 2015", inline=False)
+        myEmbed = discord.Embed(title="", description=". ", color=0x00ff00)
+        myEmbed.add_field(name=' :', value="", inline=False)
+        myEmbed.add_field(name='', value="", inline=False)
         myEmbed.set_footer(text="        ")
-        myEmbed.set_author(name="ROOTER")
+        myEmbed.set_author(name="")
          # embed.set_thumbnail(url=f"{ctx.guild.icon}")
         
-        myEmbed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ZkT2dGynxvQikVTQ4lBZMLxNTmyCqPvZEA&usqp=CAU")
+        myEmbed.set_thumbnail(url="")
         
         
         
@@ -215,7 +216,7 @@ async def help(context):
 
     myEmbed.set_thumbnail(url="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ecd5fab-be8d-4409-bd84-4a3d205b9ec8/daehq7e-48b7f14a-14ff-4082-9e7c-aee710c9bbfd.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWVjZDVmYWItYmU4ZC00NDA5LWJkODQtNGEzZDIwNWI5ZWM4XC9kYWVocTdlLTQ4YjdmMTRhLTE0ZmYtNDA4Mi05ZTdjLWFlZTcxMGM5YmJmZC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.4Y6BPM1ZrKtT-0FAscnrscGSJyKt5XxagdsRU5A6XL0")
 
-
+# change the uper things.
 
 
 
@@ -226,35 +227,35 @@ async def help(context):
 
 
 
-@client.command(name="freefire")
-async def freefire(context):
+@client.command(name="f")
+async def (context):
 
-    images = ["/home/deepank/Naman/Discord/garena-free-fire-pc.jpg", "/home/deepank/Naman/Discord/source.gif"]
+    images = [""] # list of the images, you can use wiki to get infinite images, but they will be random
 
     free_fire = random.choice(images)
 
-    await context.send(file=discord.File(free_fire))
+    await context.send(file=discord.File())
 
 
 
-@client.command(name="pubg")
-async def pubg(context):
+@client.command(name="")
+async def (context):
 
-    images = ["/home/deepank/Naman/Discord/av8jeOO_460s.jpg", "/home/deepank/Naman/Discord/download (1).jpeg", "/home/deepank/Naman/Discord/download (2).jpeg", "/home/deepank/Naman/Discord/Serious-Sam-4-Planet-Badass-4K-Ultra-HD-Mobile-Wallpaper-scaled.jpg", "/home/deepank/Naman/Discord/725bc30a562e98d4ea56c39e2a422993.jpg"]
+    images = [""]
 
     pubg = random.choice(images)
 
-    await context.send(file=discord.File(pubg))
+    await context.send(file=discord.File())
 
 
-@client.command(name="zatanprofile")
-async def zatanprofile(context):
+@client.command(name="")
+async def (context):
 
-    images = ["/home/deepank/Naman/Discord/WhatsApp Image 2020-11-29 at 8.40.31 PM.jpeg"]
+    images = [""]
 
     zatanprofile = random.choice(images)
 
-    await context.send(file=discord.File(zatanprofile))
+    await context.send(file=discord.File())
 
 
 
