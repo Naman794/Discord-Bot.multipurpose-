@@ -198,17 +198,17 @@ async def on_ready():
 
 
 
-@client.command(aliases=['rooter'])
-async def Rooter(context):
+@client.command(aliases=[' '])
+async def ctx(context):
 
-        myEmbed = discord.Embed(title="About Rooter", description="Rooter is Gaming and Sports App.Join Daily Contest & GIveaway and Win up to ₹5 Lakhs now. ", color=0x00ff00, timestamp = datetime.utcnow())
-        myEmbed.add_field(name='Founders & CEO :', value="Piyush & Dipesh Agarwal", inline=False)
-        myEmbed.add_field(name='Established', value="Since Year 2015", inline=False)
+        myEmbed = discord.Embed(title=" ", description=" ", color=0x00ff00, timestamp = datetime.utcnow())
+        myEmbed.add_field(name=':', value="", inline=False)
+        myEmbed.add_field(name='', value="", inline=False)
         myEmbed.set_footer(text=f" Requested by {context.author.name} ")
-        myEmbed.set_author(name="ROOTER")
+        myEmbed.set_author(name="")
          # embed.set_thumbnail(url=f"{ctx.guild.icon}")
         
-        myEmbed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ZkT2dGynxvQikVTQ4lBZMLxNTmyCqPvZEA&usqp=CAU")
+        myEmbed.set_thumbnail(url="")
         
         
         
@@ -224,11 +224,11 @@ async def Rooter(context):
 @client.event
 async def on_connect():
 
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Optimus & runing 30 cmd \n version 3.8.1.0'))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=''))
     
     # Settings 'Listening' status
 
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="over 7 servers 😉 || $help "))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=" "))
     
     
 
@@ -324,18 +324,18 @@ async def pubg(context, timestamp= datetime.utcnow()):
     await context.send(file=discord.File(pubg))
 
 
-@client.command(name="zatanprofile")
-async def zatanprofile(context, timestamp= datetime.utcnow()):
+@client.command(name="")
+async def (context, timestamp= datetime.utcnow()):
 
-    images = ["/home/deepank/Naman/Discord/WhatsApp Image 2020-11-29 at 8.40.31 PM.jpeg"]
+    images = [""]
 
-    zatanprofile = random.choice(images)
+    profile = random.choice(images)
 
-    await context.send(file=discord.File(zatanprofile))
+    await context.send(file=discord.File(profile))
 
 
 @client.command(name='invites')
-async def invites(context):
+async def invites(context, member: discord.member = None):
     totalInvites = 0
     for i in await context.guild.invites():
         if i.inviter == context.author:
